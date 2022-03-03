@@ -67,7 +67,11 @@ jobs:
       working-directory: frontend
     - run: cargo fmt --all -- --check
       working-directory: src-tauri
-    - run: cargo udeps --all-targets
+    - name: Frontend udeps
+      run: cargo udeps --all-targets
       working-directory: frontend
-    - run: cargo udeps --all-targets
+    - name: Backend udeps
+      run: |
+        mkdir ../frontend/dist
+        cargo udeps --all-targets
       working-directory: src-tauri
