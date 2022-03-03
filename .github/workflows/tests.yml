@@ -1,0 +1,60 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  tauri-build:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        rust: [1.58.1]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: ${{ matrix.rust }}
+        default: true
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: ${{ matrix.rust }}
+        target: wasm32-unknown-unknown
+    - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
+      if: ${{ !env.ACT }}
+    - uses: actions-rs/install@v0.1
+      with:
+        crate: tauri-cli
+        version: 1.0.0-rc
+    - uses: actions-rs/install@v0.1
+      with:
+        crate: trunk
+        version: 0.14.0
+    - run: cargo tauri build --debug
+
+  nightly:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        rust: [nightly-2021-12-19]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: ${{ matrix.rust }}
+        default: true
+        components: rustfmt
+    - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
+      if: ${{ !env.ACT }}
+    - uses: actions-rs/install@v0.1
+      with:
+        crate: cargo-udeps
+    - run: cargo fmt --all -- --check
+      working-directory: frontend
+    - run: cargo fmt --all -- --check
+      working-directory: src-tauri
+    - run: cargo udeps --all-targets
+      working-directory: frontend
+    - run: cargo udeps --all-targets
+      working-directory: src-tauri
