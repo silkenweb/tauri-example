@@ -2015,9 +2015,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.9.0"
+version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da32515d9f6e6e489d7bc9d84c71b060db7247dc035bbe44eac88cf87486d8d5"
+checksum = "87f3e037eac156d1775da914196f0f37741a274155e34a0b7e427c35d2a2ecb9"
 
 [[package]]
 name = "open"
@@ -2943,7 +2943,7 @@ dependencies = [
 [[package]]
 name = "silkenweb"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
+source = "git+https://github.com/silkenweb/silkenweb#40d0105d6b3ee74b0e8a16086b5e2ee5250a5fca"
 dependencies = [
  "caseless",
  "discard",
@@ -2963,7 +2963,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-base"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
+source = "git+https://github.com/silkenweb/silkenweb#40d0105d6b3ee74b0e8a16086b5e2ee5250a5fca"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
@@ -2975,18 +2975,14 @@ name = "silkenweb-example-tauri-frontend"
 version = "0.1.0"
 dependencies = [
  "futures-signals",
- "js-sys",
- "serde",
  "silkenweb",
  "silkenweb-tauri",
- "wasm-bindgen",
- "wasm-bindgen-futures",
 ]
 
 [[package]]
 name = "silkenweb-macros"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
+source = "git+https://github.com/silkenweb/silkenweb#40d0105d6b3ee74b0e8a16086b5e2ee5250a5fca"
 dependencies = [
  "cssparser 0.29.2",
  "proc-macro-error",
@@ -2998,7 +2994,19 @@ dependencies = [
 [[package]]
 name = "silkenweb-tauri"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
+source = "git+https://github.com/silkenweb/silkenweb#40d0105d6b3ee74b0e8a16086b5e2ee5250a5fca"
+dependencies = [
+ "js-sys",
+ "silkenweb-tauri-proc-macro",
+ "static_assertions",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+]
+
+[[package]]
+name = "silkenweb-tauri-proc-macro"
+version = "0.2.0"
+source = "git+https://github.com/silkenweb/silkenweb#40d0105d6b3ee74b0e8a16086b5e2ee5250a5fca"
 dependencies = [
  "proc-macro-error",
  "proc-macro2",

@@ -7,9 +7,5 @@ publish = false
 
 [dependencies]
 futures-signals = "0.3.24"
-js-sys = "0.3"
-serde = "1.0.136"
 silkenweb = { git = "https://github.com/silkenweb/silkenweb" }
 silkenweb-tauri = { git = "https://github.com/silkenweb/silkenweb" }
-wasm-bindgen = { version = "=0.2.78", features = ["serde-serialize"] }
-wasm-bindgen-futures = "0.4"

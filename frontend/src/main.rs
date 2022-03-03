@@ -1,5 +1,4 @@
 use futures_signals::signal::Mutable;
-use js_sys::{Object, Reflect};
 use silkenweb::{
     clone,
     elements::html::{button, div},
@@ -8,7 +7,6 @@ use silkenweb::{
     prelude::{ElementEvents, ParentBuilder},
     task::spawn_local,
 };
-use wasm_bindgen::{prelude::wasm_bindgen, JsValue};
 
 fn main() {
     let response = Mutable::new(String::new());
@@ -62,9 +60,7 @@ fn feed_bandit(food: &str, response: Mutable<String>) {
             }
             Err(e) => {
                 let window = window().unwrap();
-                window
-                    .alert_with_message(&format!("Error: {:?}", e))
-                    .unwrap();
+                window.alert_with_message(&e).unwrap();
             }
         }
     });
