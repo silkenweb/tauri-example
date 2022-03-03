@@ -29,7 +29,8 @@ jobs:
       with:
         crate: trunk
         version: 0.14.0
-    - run: cargo tauri build --debug
+    # Disable to get cache filled
+    # - run: cargo tauri build --debug
 
   nightly:
     strategy:
@@ -56,5 +57,6 @@ jobs:
       working-directory: src-tauri
     - run: cargo udeps --all-targets
       working-directory: frontend
-    - run: cargo udeps --all-targets
-      working-directory: src-tauri
+    # TODO: Disable for now as not working
+    # - run: cargo udeps --all-targets
+    #   working-directory: src-tauri
