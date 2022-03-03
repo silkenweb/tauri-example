@@ -34,7 +34,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0 libgtk-3-dev
-    - run: cargo tauri build --debug
+    # - run: cargo tauri build --debug
 
   nightly:
     strategy:
@@ -66,5 +66,5 @@ jobs:
       working-directory: src-tauri
     - run: cargo udeps --all-targets
       working-directory: frontend
-    - run: cargo udeps --all-targets
-      working-directory: src-tauri
+    # - run: cargo udeps --all-targets
+    #   working-directory: src-tauri
