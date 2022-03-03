@@ -21,15 +21,17 @@ jobs:
         target: wasm32-unknown-unknown
     - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
       if: ${{ !env.ACT }}
-    - uses: actions-rs/install@v0.1
+    - name: Install tauri-cli
+      uses: actions-rs/install@v0.1
       with:
         crate: tauri-cli
         version: ^1.0.0-rc
-    - uses: actions-rs/install@v0.1
+    - name: Install trunk
+      uses: actions-rs/install@v0.1
       with:
         crate: trunk
         version: 0.14.0
-    - name: install webkit2gtk (ubuntu only)
+    - name: Install webkit2gtk
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
@@ -52,10 +54,11 @@ jobs:
         components: rustfmt
     - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
       if: ${{ !env.ACT }}
-    - uses: actions-rs/install@v0.1
+    - name: Install cargo-udeps
+      uses: actions-rs/install@v0.1
       with:
         crate: cargo-udeps
-    - name: install webkit2gtk (ubuntu only)
+    - name: Install webkit2gtk
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
