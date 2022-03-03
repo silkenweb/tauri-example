@@ -10,8 +10,6 @@ use silkenweb::{
 };
 use wasm_bindgen::{prelude::wasm_bindgen, JsValue};
 
-// TODO: Tauri events
-
 fn main() {
     let response = Mutable::new(String::new());
 
