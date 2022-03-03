@@ -2943,7 +2943,7 @@ dependencies = [
 [[package]]
 name = "silkenweb"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#d32a254825de2d151a25545da73d1cebd44d7446"
+source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
 dependencies = [
  "caseless",
  "discard",
@@ -2963,7 +2963,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-base"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#d32a254825de2d151a25545da73d1cebd44d7446"
+source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
@@ -2978,6 +2978,7 @@ dependencies = [
  "js-sys",
  "serde",
  "silkenweb",
+ "silkenweb-tauri",
  "wasm-bindgen",
  "wasm-bindgen-futures",
 ]
@@ -2985,9 +2986,20 @@ dependencies = [
 [[package]]
 name = "silkenweb-macros"
 version = "0.2.0"
-source = "git+https://github.com/silkenweb/silkenweb#d32a254825de2d151a25545da73d1cebd44d7446"
+source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
 dependencies = [
  "cssparser 0.29.2",
+ "proc-macro-error",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "silkenweb-tauri"
+version = "0.2.0"
+source = "git+https://github.com/silkenweb/silkenweb#7f74879ef327e3f86260a06e982b7254bccecbc2"
+dependencies = [
  "proc-macro-error",
  "proc-macro2",
  "quote",
