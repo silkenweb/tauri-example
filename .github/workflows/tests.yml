@@ -29,8 +29,7 @@ jobs:
       with:
         crate: trunk
         version: 0.14.0
-    # Disable to get cache filled
-    # - run: cargo tauri build --debug
+    - run: cargo tauri build --debug
 
   nightly:
     strategy:
