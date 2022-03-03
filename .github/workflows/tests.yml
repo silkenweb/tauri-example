@@ -30,11 +30,11 @@ jobs:
         crate: trunk
         version: 0.14.0
     - name: install webkit2gtk (ubuntu only)
-      if: matrix.platform == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y webkit2gtk-4.0 libgtk-3-dev
-    # - run: cargo tauri build --debug
+        sudo apt-get install -y webkit2gtk-4.0
+    - run: cargo tauri build --debug
 
   nightly:
     strategy:
@@ -56,15 +56,15 @@ jobs:
       with:
         crate: cargo-udeps
     - name: install webkit2gtk (ubuntu only)
-      if: matrix.platform == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y webkit2gtk-4.0 libgtk-3-dev
+        sudo apt-get install -y webkit2gtk-4.0
     - run: cargo fmt --all -- --check
       working-directory: frontend
     - run: cargo fmt --all -- --check
       working-directory: src-tauri
     - run: cargo udeps --all-targets
       working-directory: frontend
-    # - run: cargo udeps --all-targets
-    #   working-directory: src-tauri
+    - run: cargo udeps --all-targets
+      working-directory: src-tauri
