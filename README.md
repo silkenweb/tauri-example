@@ -1,3 +1,5 @@
 # SilkenWeb Tauri Example
 
-This example is very much a work in progress.
+This example shows how to build a simple [Tauri] app, and send messages between the front and back ends, with and without error handling.
+
+[Tauri]: https://tauri.studio/
