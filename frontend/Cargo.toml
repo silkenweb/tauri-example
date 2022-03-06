@@ -9,3 +9,4 @@ publish = false
 futures-signals = "0.3.24"
 silkenweb = { git = "https://github.com/silkenweb/silkenweb" }
 silkenweb-tauri = { git = "https://github.com/silkenweb/silkenweb" }
+web-sys="0.3"

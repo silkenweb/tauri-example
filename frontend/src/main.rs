@@ -2,11 +2,11 @@ use futures_signals::signal::Mutable;
 use silkenweb::{
     clone,
     elements::html::{button, div},
-    macros::web_sys::window,
     mount,
     prelude::{ElementEvents, ParentBuilder},
     task::spawn_local,
 };
+use web_sys::window;
 
 fn main() {
     let response = Mutable::new(String::new());
