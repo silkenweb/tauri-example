@@ -25,7 +25,7 @@ jobs:
       uses: actions-rs/install@v0.1
       with:
         crate: tauri-cli
-        version: ^1.0.0-rc
+        version: ^1.1.1
     - name: Install trunk
       uses: actions-rs/install@v0.1
       with:
