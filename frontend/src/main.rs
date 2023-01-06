@@ -3,8 +3,9 @@ use silkenweb::{
     clone,
     elements::html::{button, div},
     mount,
-    prelude::{ElementEvents, ParentBuilder},
+    prelude::{ElementEvents, ParentElement},
     task::spawn_local,
+    value::Sig,
 };
 use web_sys::window;
 
@@ -45,7 +46,7 @@ fn main() {
                     move |_, _| feed_bandit("Sprouts", response.clone())
                 })),
             )
-            .text_signal(response.signal_cloned()),
+            .text(Sig(response.signal_cloned())),
     );
 }
 
