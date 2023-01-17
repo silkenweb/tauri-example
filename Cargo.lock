@@ -2782,7 +2782,7 @@ dependencies = [
 [[package]]
 name = "silkenweb"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "caseless",
  "discard",
@@ -2804,7 +2804,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-base"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "cssparser 0.29.6",
  "itertools",
@@ -2827,7 +2827,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-macros"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "cssparser 0.29.6",
  "derive_more",
@@ -2842,7 +2842,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-signals-ext"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "futures-signals",
  "paste",
@@ -2852,7 +2852,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-tauri"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "js-sys",
  "serde-wasm-bindgen",
@@ -2865,7 +2865,7 @@ dependencies = [
 [[package]]
 name = "silkenweb-tauri-proc-macro"
 version = "0.3.0"
-source = "git+https://github.com/silkenweb/silkenweb#137aaa788cef354c3d0778aeda9cb1ad73db4012"
+source = "git+https://github.com/silkenweb/silkenweb#546d99c0e0b796e9005c8564fa495706dd7875e4"
 dependencies = [
  "proc-macro-error",
  "proc-macro2",
