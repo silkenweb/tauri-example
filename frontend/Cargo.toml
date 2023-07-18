@@ -7,6 +7,6 @@ publish = false
 
 [dependencies]
 futures-signals = "0.3.24"
-silkenweb = "0.4.0"
-silkenweb-tauri = { git = "https://github.com/silkenweb/silkenweb" }
+silkenweb = "0.5.0"
+silkenweb-tauri = "0.5.0"
 web-sys = "0.3.60"
