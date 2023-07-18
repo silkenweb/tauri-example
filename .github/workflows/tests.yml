@@ -17,9 +17,9 @@ jobs:
     - uses: actions-rs/toolchain@v1
       with:
         profile: minimal
-        toolchain: ${{ matrix.rust }}
+      toolchain: ${{ matrix.rust }}
         target: wasm32-unknown-unknown
-    - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
+    - uses: Swatinem/rust-cache@v2
       if: ${{ !env.ACT }}
     - name: Install tauri-cli
       uses: actions-rs/install@v0.1
@@ -52,7 +52,7 @@ jobs:
         toolchain: ${{ matrix.rust }}
         default: true
         components: rustfmt
-    - uses: Swatinem/rust-cache@3bb3a9a087029c7bc392586cdc88cb6f66b9c6ef
+    - uses: Swatinem/rust-cache@v2
       if: ${{ !env.ACT }}
     - name: Install cargo-udeps
       uses: actions-rs/install@v0.1
